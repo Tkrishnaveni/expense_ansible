@@ -11,8 +11,7 @@
           name: mysqld
           state: started
           enabled: yes
-
-    - name: connect to mysqlserver
+   - name: connect to mysqlserver
       community.mysql.mysql_info:
            login_user: root
            login_password: ExpenseApp@1
