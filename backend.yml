@@ -37,7 +37,7 @@
     ansible.builtin.copy:
      src: backend.service
      dest: /etc/systemd/system/backend.service
-  - name: install pip libraries:
+  - name: install pip libraries
     ansible.builtin.pip:
      name: pymysql
      executable: pip3.9
