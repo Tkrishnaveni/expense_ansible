@@ -10,11 +10,10 @@
     ansible.builtin.package:
      name: "{{item}}"
      state: installed
-     executable: pip3.9
     loop:
      - nodejs
      - mysql
-     - PyMySQL
+  
   - name: create expense user
     ansible.builtin.user:
      name: expense
@@ -38,6 +37,10 @@
     ansible.builtin.copy:
      src: backend.service
      dest: /etc/systemd/system/backend.service
+  - name: install pip libraries:
+    ansible.builtin.pip:
+     name: pymysql
+     executable: pip3.9
   - name: import mysql data
     community.mysql.mysql_db:
      state: import
