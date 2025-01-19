@@ -10,6 +10,7 @@
     ansible.builtin.package:
      name: "{{item}}"
      state: installed
+     executable: pip3.9
     loop:
      - nodejs
      - mysql
