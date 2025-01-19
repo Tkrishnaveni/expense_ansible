@@ -13,6 +13,7 @@
     loop:
      - nodejs
      - mysql
+     - cryptography
   
   - name: create expense user
     ansible.builtin.user:
